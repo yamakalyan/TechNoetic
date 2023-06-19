@@ -1,0 +1,50 @@
+#services-full{
+    background-image: url("/imgs/services.jpg");
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    /* background-size: contain; */
+}
+
+.card{
+    transition: 0.8s;
+}
+.card:hover{
+    background: #35ffc2;
+    box-shadow: 1px 2px 2px 0px solid rgb(185, 181, 181);
+    transform: translateY(-3%);
+    transition: 0.8s;
+}
+
+.box .carousel-imgs{
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 0px;
+    scroll-behavior: smooth;
+}
+.carousel-imgs img{
+    height: 350px;
+    width: calc(100% / 3);
+    object-fit: cover;
+    margin-left: 25px;
+    cursor: pointer;
+    scroll-snap-align: center;
+}
+@media only screen and (max-width : 768px){
+    .carousel-imgs img{
+        width: calc(100% / 1);
+    }
+}
+.carousel-imgs .dragging{
+    cursor: grab;
+    scroll-behavior: auto;
+}
+.carousel-imgs .dragging img{
+    pointer-events: none;
+}
+
+.carousel-imgs img:first-child{
+    margin-left: 0px;
+}
+.box{
+    position: relative;
+}
